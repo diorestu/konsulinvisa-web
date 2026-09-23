@@ -39,9 +39,16 @@
       <div class="nav-brand">
         <img src="assets/brand_logo.png" alt="konsulinvisa.id Logo" class="brand-logo-img" />
       </div>
-      <div class="nav-status">
-        <span class="status-pulse"></span>
-        <span class="status-label">Platform Dalam Pengembangan</span>
+      <div class="nav-actions">
+        <div class="lang-switch-glass" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <span class="lang-divider">/</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <div class="nav-status">
+          <span class="status-pulse"></span>
+          <span class="status-label" data-i18n="navStatus">Platform Dalam Pengembangan</span>
+        </div>
       </div>
     </header>
 
@@ -52,17 +59,17 @@
         <!-- Badge -->
         <div class="pill-badge">
           <span class="badge-dot">✦</span>
-          <span>Official Launching Soon</span>
+          <span data-i18n="pillBadge">Segera Hadir Resmi</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="main-heading">
+        <h1 class="main-heading" id="mainHeading">
           Solusi Pengurusan Visa <br />
           <span class="heading-gradient">Bisnis & Global Travel</span>
         </h1>
 
         <!-- Subheading -->
-        <p class="main-subheading">
+        <p class="main-subheading" data-i18n="mainSubheading">
           Kami sedang mempersiapkan platform asistensi visa paling transparan, profesional, dan terpercaya di Indonesia. Dapatkan pendampingan menyeluruh dari persiapan dokumen hingga visa terbit.
         </p>
 
@@ -72,7 +79,7 @@
             <div class="timer-digit-box">
               <span class="timer-digit" id="cdDays">00</span>
             </div>
-            <span class="timer-unit">HARI</span>
+            <span class="timer-unit" data-i18n="unitDays">HARI</span>
           </div>
 
           <span class="timer-colon">:</span>
@@ -81,7 +88,7 @@
             <div class="timer-digit-box">
               <span class="timer-digit" id="cdHours">00</span>
             </div>
-            <span class="timer-unit">JAM</span>
+            <span class="timer-unit" data-i18n="unitHours">JAM</span>
           </div>
 
           <span class="timer-colon">:</span>
@@ -90,7 +97,7 @@
             <div class="timer-digit-box">
               <span class="timer-digit" id="cdMinutes">00</span>
             </div>
-            <span class="timer-unit">MENIT</span>
+            <span class="timer-unit" data-i18n="unitMinutes">MENIT</span>
           </div>
 
           <span class="timer-colon">:</span>
@@ -99,7 +106,7 @@
             <div class="timer-digit-box">
               <span class="timer-digit" id="cdSeconds">00</span>
             </div>
-            <span class="timer-unit">DETIK</span>
+            <span class="timer-unit" data-i18n="unitSeconds">DETIK</span>
           </div>
         </div>
 
@@ -110,7 +117,7 @@
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
               <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
             </svg>
-            <span>Dapatkan akses prioritas & konsultasi gratis saat peresmian:</span>
+            <span data-i18n="leadHeader">Dapatkan akses prioritas & konsultasi gratis saat peresmian:</span>
           </div>
 
           <form id="notifyForm" class="lead-form">
@@ -121,9 +128,10 @@
                 placeholder="Masukkan Email atau No. WhatsApp Anda" 
                 required 
                 autocomplete="off"
+                data-i18n-ph="leadPlaceholder"
               />
               <button type="submit" class="lead-submit-btn" id="leadBtn">
-                <span>Beri Tahu Saya</span>
+                <span data-i18n="leadBtn">Beri Tahu Saya</span>
                 <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -135,7 +143,7 @@
           <!-- Toast Feedback -->
           <div id="leadToast" class="toast-card hidden">
             <div class="toast-check">✓</div>
-            <span>Terima kasih! Kontak Anda telah terdaftar. Kami akan menghubungi Anda saat rilis.</span>
+            <span data-i18n="leadToast">Terima kasih! Kontak Anda telah terdaftar. Kami akan menghubungi Anda saat rilis.</span>
           </div>
         </div>
 
@@ -143,7 +151,7 @@
         <div class="corp-highlight-strip">
           <div class="corp-strip-header">
             <span class="corp-sparkle">✦</span>
-            <span>Layanan Korporasi & Investasi Terintegrasi</span>
+            <span data-i18n="corpHeader">Layanan Korporasi & Investasi Terintegrasi</span>
           </div>
 
           <div class="corp-grid">
@@ -152,6 +160,7 @@
               target="_blank" 
               rel="noopener noreferrer" 
               class="corp-card"
+              id="linkPtPma"
             >
               <div class="corp-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -166,10 +175,10 @@
               </div>
               <div class="corp-info">
                 <div class="corp-title-row">
-                  <h4>Pendirian PT PMA</h4>
+                  <h4 data-i18n="corpPtPmaTitle">Pendirian PT PMA</h4>
                   <span class="corp-link-arrow">→</span>
                 </div>
-                <p>Legalitas penanaman modal asing, OSS RBA, NIB, & izin usaha terintegrasi.</p>
+                <p data-i18n="corpPtPmaDesc">Legalitas penanaman modal asing, OSS RBA, NIB, & izin usaha terintegrasi.</p>
               </div>
             </a>
 
@@ -178,6 +187,7 @@
               target="_blank" 
               rel="noopener noreferrer" 
               class="corp-card"
+              id="linkTax"
             >
               <div class="corp-icon-box">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -188,10 +198,10 @@
               </div>
               <div class="corp-info">
                 <div class="corp-title-row">
-                  <h4>Accounting & Tax Services</h4>
+                  <h4 data-i18n="corpTaxTitle">Accounting & Tax Services</h4>
                   <span class="corp-link-arrow">→</span>
                 </div>
-                <p>Pembukuan korporasi, kepatuhan pajak bulanan & tahunan (SPT), serta audit.</p>
+                <p data-i18n="corpTaxDesc">Pembukuan korporasi, kepatuhan pajak bulanan & tahunan (SPT), serta audit.</p>
               </div>
             </a>
           </div>
@@ -199,13 +209,14 @@
 
         <!-- Quick Contact Hub -->
         <div class="channels-section">
-          <span class="channels-caption">Konsultasi pengurusan visa, pendirian PT PMA, atau tax services langsung dengan konsultan kami:</span>
+          <span class="channels-caption" data-i18n="channelsCaption">Konsultasi pengurusan visa, pendirian PT PMA, atau tax services langsung dengan konsultan kami:</span>
           <div class="channels-buttons">
             <a 
               href="https://wa.me/6281908797799?text=Halo%20konsulinvisa.id%2C%20saya%20ingin%20konsultasi%20pengurusan%20visa." 
               target="_blank" 
               rel="noopener noreferrer" 
               class="channel-btn wa-channel"
+              id="linkWaDirect"
             >
               <div class="channel-icon-circle wa-circle">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -213,7 +224,7 @@
                 </svg>
               </div>
               <div class="channel-text">
-                <span class="channel-sub">Chat Langsung WhatsApp</span>
+                <span class="channel-sub" data-i18n="waSub">Chat Langsung WhatsApp</span>
                 <strong class="channel-main">+62 819-0879-7799</strong>
               </div>
             </a>
@@ -232,7 +243,7 @@
                 </svg>
               </div>
               <div class="channel-text">
-                <span class="channel-sub">Official Instagram</span>
+                <span class="channel-sub" data-i18n="igSub">Official Instagram</span>
                 <strong class="channel-main">@konsulinvisa.id</strong>
               </div>
             </a>
@@ -241,26 +252,6 @@
 
       </div>
     </main>
-
-    <!-- Refined Minimalist Glass Footer -->
-    <footer class="bottom-footer">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="https://wa.me/6281908797799" target="_blank" rel="noopener noreferrer" class="footer-link wa">
-            <span class="link-bullet">●</span> WhatsApp: +6281908797799
-          </a>
-          <span class="footer-sep">|</span>
-          <a href="https://instagram.com/konsulinvisa.id" target="_blank" rel="noopener noreferrer" class="footer-link ig">
-            <span class="link-bullet">●</span> Instagram: @konsulinvisa.id
-          </a>
-        </div>
-        <div class="footer-meta">
-          <span>&copy; 2026 <strong>konsulinvisa.id</strong> — Business Beyond Borders</span>
-          <span class="footer-sep">|</span>
-          <span class="location">Jakarta, Indonesia</span>
-        </div>
-      </div>
-    </footer>
   </div>
 
   <script src="script.js"></script>

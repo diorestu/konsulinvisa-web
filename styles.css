@@ -151,6 +151,50 @@ button {
   filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.15));
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(14, 25, 54, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.lang-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background: rgba(56, 189, 248, 0.2);
+  color: var(--primary-cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+.lang-divider {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.18);
+  user-select: none;
+}
+
 .nav-status {
   display: inline-flex;
   align-items: center;
@@ -632,79 +676,6 @@ button {
 }
 
 /* --- Refined Minimalist Footer --- */
-.bottom-footer {
-  padding: 16px 36px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(3, 7, 18, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  font-size: 0.825rem;
-  color: var(--text-dim);
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.footer-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-muted);
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer-link.wa:hover {
-  color: #4ade80;
-}
-
-.footer-link.ig:hover {
-  color: #f472b6;
-}
-
-.link-bullet {
-  font-size: 0.55rem;
-}
-
-.footer-link.wa .link-bullet {
-  color: #25d366;
-}
-
-.footer-link.ig .link-bullet {
-  color: #e1306c;
-}
-
-.footer-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-meta strong {
-  color: #ffffff;
-}
-
-.footer-sep {
-  color: rgba(255, 255, 255, 0.15);
-}
-
-.location {
-  color: #7dd3fc;
-}
-
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
@@ -772,19 +743,5 @@ button {
   .channel-btn {
     width: 100%;
     min-width: unset;
-  }
-
-  .bottom-footer {
-    padding: 18px 20px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .footer-links, .footer-meta {
-    justify-content: center;
   }
 }
