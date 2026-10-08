@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>konsulinvisa.id — Segera Hadir | Business Beyond Borders</title>
-  <meta name="description" content="konsulinvisa.id segera hadir. Solusi konsultasi dan pengurusan visa bisnis, wisata, studi, dan investor terpercaya. Hubungi WhatsApp +6281908797799 atau Instagram @konsulinvisa.id." />
-  
-  <!-- Open Graph -->
+  <title>konsulinvisa.id — Indonesia Visa, KITAS & KITAP Management for Foreigners</title>
+  <meta name="description" content="Simple, fast, and 100% legal visa management for people abroad coming to Indonesia. Specialized handling for Working KITAS, Investor KITAS, Spouse KITAS, and 5-Year KITAP permanent residency." />
+  <meta name="keywords" content="Indonesia visa, KITAS Indonesia, KITAP Indonesia, Investor KITAS, Spouse KITAS, Working KITAS, Bali visa agent, Jakarta visa consultant, konsulinvisa, akhirnyavisa" />
+
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://konsulinvisa.id/" />
-  <meta property="og:title" content="konsulinvisa.id — Segera Hadir | Business Beyond Borders" />
-  <meta property="og:description" content="Platform konsultasi & pengurusan visa internasional terpercaya segera hadir." />
+  <meta property="og:title" content="konsulinvisa.id — Simple Indonesia Visa, KITAS & KITAP Management" />
+  <meta property="og:description" content="Moving or living in Indonesia? Fast, reliable, and legal KITAS & KITAP handling. End-to-end assistance from abroad to arrival." />
   <meta property="og:image" content="assets/brand_logo.png" />
 
   <!-- Favicon -->
@@ -25,233 +26,1160 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Ambient Luminous Mesh Backdrop -->
-  <div class="ambient-backdrop" aria-hidden="true">
-    <div class="mesh-orb orb-primary"></div>
-    <div class="mesh-orb orb-secondary"></div>
-    <div class="mesh-orb orb-cyan"></div>
-    <div class="grid-overlay"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-badge">2026 OFFICIAL UPDATE</span>
+      <span class="announcement-text" data-i18n="announcementText">
+        Official Online Visa Applications Open: Apply for KITAS &amp; E-Visa directly from your home country without visiting an Indonesian Embassy.
+      </span>
+      <a href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20inquire%20about%20the%20latest%202026%20KITAS%20regulations." target="_blank" rel="noopener noreferrer" class="announcement-link" data-i18n="announcementLink">
+        Ask a Consultant &rarr;
+      </a>
+    </div>
   </div>
 
-  <div class="page-layout">
-    <!-- Top Navigation / Brand Bar -->
-    <header class="top-nav">
-      <div class="nav-brand">
-        <img src="assets/brand_logo.png" alt="konsulinvisa.id Logo" class="brand-logo-img" />
-      </div>
-      <div class="nav-actions">
-        <div class="lang-switch-glass" role="group" aria-label="Language Selector">
-          <button type="button" class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="konsulinvisa.id Home">
+        <img src="assets/logo_transparent.png" alt="konsulinvisa.id Logo" class="nav-logo-img" />
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#quiz-section" class="nav-link" data-i18n="navFinder">Visa Finder</a>
+        <a href="#visas-section" class="nav-link" data-i18n="navKitas">KITAS &amp; Permits</a>
+        <a href="#kitap-section" class="nav-link" data-i18n="navKitap">KITAP Permanent</a>
+        <a href="#compare-section" class="nav-link" data-i18n="navCompare">KITAS vs KITAP</a>
+        <a href="#process-section" class="nav-link" data-i18n="navProcess">How It Works</a>
+        <a href="#why-section" class="nav-link" data-i18n="navWhy">Why Us</a>
+        <a href="#faq-section" class="nav-link" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <!-- Right Nav Controls -->
+      <div class="nav-controls">
+        <!-- Language Switcher -->
+        <div class="lang-switch" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch to English">EN</button>
           <span class="lang-divider">/</span>
-          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-label="Ganti ke Bahasa Indonesia">ID</button>
         </div>
-        <div class="nav-status">
-          <span class="status-pulse"></span>
-          <span class="status-label" data-i18n="navStatus">Platform Dalam Pengembangan</span>
-        </div>
+
+        <!-- WhatsApp CTA in Navbar -->
+        <a 
+          href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20consult%20about%20my%20Indonesia%20visa%20options." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-nav-wa"
+          id="navWaBtn"
+        >
+          <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+          </svg>
+          <span data-i18n="navWaText">Order via WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <!-- Center Hero Card: Pure Coming Soon -->
-    <main class="hero-wrapper">
-      <div class="coming-soon-glass-card">
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav-links">
+        <a href="#quiz-section" class="mobile-link" data-i18n="navFinder">Visa Finder</a>
+        <a href="#visas-section" class="mobile-link" data-i18n="navKitas">KITAS &amp; Permits</a>
+        <a href="#kitap-section" class="mobile-link" data-i18n="navKitap">KITAP Permanent</a>
+        <a href="#compare-section" class="mobile-link" data-i18n="navCompare">KITAS vs KITAP</a>
+        <a href="#process-section" class="mobile-link" data-i18n="navProcess">How It Works</a>
+        <a href="#why-section" class="mobile-link" data-i18n="navWhy">Why Us</a>
+        <a href="#faq-section" class="mobile-link" data-i18n="navFaq">FAQ</a>
+      </nav>
+      <div class="mobile-drawer-cta">
+        <a 
+          href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20consult%20about%20my%20Indonesia%20visa%20options." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-primary-wa full-width"
+        >
+          <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+          </svg>
+          <span data-i18n="navWaText">Order via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
         
-        <!-- Badge -->
-        <div class="pill-badge">
-          <span class="badge-dot">✦</span>
-          <span data-i18n="pillBadge">Segera Hadir Resmi</span>
+        <!-- Trust Pill -->
+        <div class="hero-badge">
+          <span class="badge-sparkle">✦</span>
+          <span data-i18n="heroBadge">Official Indonesia Immigration Consultancy • 99.4% Approval</span>
         </div>
 
-        <!-- Headline -->
-        <h1 class="main-heading" id="mainHeading">
-          Solusi Pengurusan Visa <br />
-          <span class="heading-gradient">Bisnis & Global Travel</span>
+        <!-- Main Headline -->
+        <h1 class="hero-title" id="heroTitle">
+          Your Trusted Partner for <br />
+          <span class="gradient-text">Indonesia Visas, KITAS &amp; KITAP</span>
         </h1>
 
         <!-- Subheading -->
-        <p class="main-subheading" data-i18n="mainSubheading">
-          Kami sedang mempersiapkan platform asistensi visa paling transparan, profesional, dan terpercaya di Indonesia. Dapatkan pendampingan menyeluruh dari persiapan dokumen hingga visa terbit.
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Fast, reliable, and 100% legal visa processing for expats, investors, digital nomads, and families coming from abroad. We take care of every bureaucratic detail—from pre-arrival Telex to VIP biometrics and e-KITAS delivery.
         </p>
 
-        <!-- Glass Countdown Timer -->
-        <div class="timer-container" aria-label="Penghitung waktu menuju peluncuran">
-          <div class="timer-item">
-            <div class="timer-digit-box">
-              <span class="timer-digit" id="cdDays">00</span>
-            </div>
-            <span class="timer-unit" data-i18n="unitDays">HARI</span>
-          </div>
-
-          <span class="timer-colon">:</span>
-
-          <div class="timer-item">
-            <div class="timer-digit-box">
-              <span class="timer-digit" id="cdHours">00</span>
-            </div>
-            <span class="timer-unit" data-i18n="unitHours">JAM</span>
-          </div>
-
-          <span class="timer-colon">:</span>
-
-          <div class="timer-item">
-            <div class="timer-digit-box">
-              <span class="timer-digit" id="cdMinutes">00</span>
-            </div>
-            <span class="timer-unit" data-i18n="unitMinutes">MENIT</span>
-          </div>
-
-          <span class="timer-colon">:</span>
-
-          <div class="timer-item">
-            <div class="timer-digit-box">
-              <span class="timer-digit" id="cdSeconds">00</span>
-            </div>
-            <span class="timer-unit" data-i18n="unitSeconds">DETIK</span>
-          </div>
-        </div>
-
-        <!-- Notify / Early Access Capture -->
-        <div class="lead-box">
-          <div class="lead-header">
-            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group">
+          <a 
+            href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20am%20abroad%20and%20need%20assistance%20with%20my%20Indonesia%20visa%20%2F%20KITAS." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-hero-primary"
+            id="heroWaBtn"
+          >
+            <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
             </svg>
-            <span data-i18n="leadHeader">Dapatkan akses prioritas & konsultasi gratis saat peresmian:</span>
+            <span data-i18n="heroBtnWa">Order via WhatsApp</span>
+          </a>
+
+          <a href="#quiz-section" class="btn-hero-secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span data-i18n="heroBtnQuiz">Check Visa Eligibility (30s)</span>
+          </a>
+        </div>
+
+        <!-- Trust Features Highlights -->
+        <div class="hero-trust-chips">
+          <div class="trust-chip">
+            <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span data-i18n="trustChip1">100% Processed From Abroad</span>
           </div>
-
-          <form id="notifyForm" class="lead-form">
-            <div class="lead-input-pill">
-              <input 
-                type="text" 
-                id="leadInput" 
-                placeholder="Masukkan Email atau No. WhatsApp Anda" 
-                required 
-                autocomplete="off"
-                data-i18n-ph="leadPlaceholder"
-              />
-              <button type="submit" class="lead-submit-btn" id="leadBtn">
-                <span data-i18n="leadBtn">Beri Tahu Saya</span>
-                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
-            </div>
-          </form>
-
-          <!-- Toast Feedback -->
-          <div id="leadToast" class="toast-card hidden">
-            <div class="toast-check">✓</div>
-            <span data-i18n="leadToast">Terima kasih! Kontak Anda telah terdaftar. Kami akan menghubungi Anda saat rilis.</span>
+          <div class="trust-chip">
+            <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span data-i18n="trustChip2">Official Telex &amp; E-KITAS Included</span>
+          </div>
+          <div class="trust-chip">
+            <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span data-i18n="trustChip3">Bali &amp; Jakarta Biometrics Escort</span>
+          </div>
+          <div class="trust-chip">
+            <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span data-i18n="trustChip4">Dedicated English Consultant</span>
           </div>
         </div>
 
-        <!-- Corporate Services Highlight Strip -->
-        <div class="corp-highlight-strip">
-          <div class="corp-strip-header">
-            <span class="corp-sparkle">✦</span>
-            <span data-i18n="corpHeader">Layanan Korporasi & Investasi Terintegrasi</span>
+        <!-- Metrics Strip -->
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">99.4%</span>
+            <span class="stat-label" data-i18n="statRate">Immigration Approval Rate</span>
           </div>
-
-          <div class="corp-grid">
-            <a 
-              href="https://wa.me/6281908797799?text=Halo%20konsulinvisa.id%2C%20saya%20ingin%20konsultasi%20mengenai%20layanan%20Pendirian%20PT%20PMA." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="corp-card"
-              id="linkPtPma"
-            >
-              <div class="corp-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                  <line x1="9" y1="22" x2="9" y2="22.01"></line>
-                  <line x1="15" y1="22" x2="15" y2="22.01"></line>
-                  <line x1="8" y1="6" x2="16" y2="6"></line>
-                  <line x1="8" y1="10" x2="16" y2="10"></line>
-                  <line x1="8" y1="14" x2="16" y2="14"></line>
-                  <line x1="8" y1="18" x2="16" y2="18"></line>
-                </svg>
-              </div>
-              <div class="corp-info">
-                <div class="corp-title-row">
-                  <h4 data-i18n="corpPtPmaTitle">Pendirian PT PMA</h4>
-                  <span class="corp-link-arrow">→</span>
-                </div>
-                <p data-i18n="corpPtPmaDesc">Legalitas penanaman modal asing, OSS RBA, NIB, & izin usaha terintegrasi.</p>
-              </div>
-            </a>
-
-            <a 
-              href="https://wa.me/6281908797799?text=Halo%20konsulinvisa.id%2C%20saya%20ingin%20konsultasi%20mengenai%20layanan%20Accounting%20%26%20Tax%20Services." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="corp-card"
-              id="linkTax"
-            >
-              <div class="corp-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
-              </div>
-              <div class="corp-info">
-                <div class="corp-title-row">
-                  <h4 data-i18n="corpTaxTitle">Accounting & Tax Services</h4>
-                  <span class="corp-link-arrow">→</span>
-                </div>
-                <p data-i18n="corpTaxDesc">Pembukuan korporasi, kepatuhan pajak bulanan & tahunan (SPT), serta audit.</p>
-              </div>
-            </a>
+          <div class="stat-card">
+            <span class="stat-number">5,200+</span>
+            <span class="stat-label" data-i18n="statIssued">Visas &amp; KITAS Issued</span>
           </div>
-        </div>
-
-        <!-- Quick Contact Hub -->
-        <div class="channels-section">
-          <span class="channels-caption" data-i18n="channelsCaption">Konsultasi pengurusan visa, pendirian PT PMA, atau tax services langsung dengan konsultan kami:</span>
-          <div class="channels-buttons">
-            <a 
-              href="https://wa.me/6281908797799?text=Halo%20konsulinvisa.id%2C%20saya%20ingin%20konsultasi%20pengurusan%20visa." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="channel-btn wa-channel"
-              id="linkWaDirect"
-            >
-              <div class="channel-icon-circle wa-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
-              </div>
-              <div class="channel-text">
-                <span class="channel-sub" data-i18n="waSub">Chat Langsung WhatsApp</span>
-                <strong class="channel-main">+62 819-0879-7799</strong>
-              </div>
-            </a>
-
-            <a 
-              href="https://instagram.com/konsulinvisa.id" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="channel-btn ig-channel"
-            >
-              <div class="channel-icon-circle ig-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </div>
-              <div class="channel-text">
-                <span class="channel-sub" data-i18n="igSub">Official Instagram</span>
-                <strong class="channel-main">@konsulinvisa.id</strong>
-              </div>
-            </a>
+          <div class="stat-card">
+            <span class="stat-number">5–7 Days</span>
+            <span class="stat-label" data-i18n="statSpeed">Average E-Visa Turnaround</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">48+</span>
+            <span class="stat-label" data-i18n="statCountries">Client Nationalities Welcomed</span>
           </div>
         </div>
 
       </div>
-    </main>
+    </section>
+
+    <!-- VISA ELIGIBILITY CHECKER (QUIZ) -->
+    <section class="section quiz-section" id="quiz-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="quizTag">INSTANT VISA FINDER</span>
+          <h2 class="section-title" data-i18n="quizTitle">Check Your Visa Eligibility</h2>
+          <p class="section-desc" data-i18n="quizDesc">
+            Answer 3 quick questions to discover the ideal visa or stay permit for your travel, family, or investment goals in Indonesia.
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <!-- Step Progress Indicator -->
+          <div class="quiz-progress-bar">
+            <div class="quiz-step-indicator active" id="quizIndicator1">
+              <span class="step-num">1</span>
+              <span class="step-text" data-i18n="quizStep1Text">Purpose</span>
+            </div>
+            <div class="quiz-progress-line" id="quizLine1"></div>
+            <div class="quiz-step-indicator" id="quizIndicator2">
+              <span class="step-num">2</span>
+              <span class="step-text" data-i18n="quizStep2Text">Stay Duration</span>
+            </div>
+            <div class="quiz-progress-line" id="quizLine2"></div>
+            <div class="quiz-step-indicator" id="quizIndicator3">
+              <span class="step-num">3</span>
+              <span class="step-text" data-i18n="quizStep3Text">Sponsor Status</span>
+            </div>
+          </div>
+
+          <!-- Quiz Card Card -->
+          <div class="quiz-card" id="quizCard">
+            <!-- Step 1 View -->
+            <div class="quiz-step-view active" id="quizStep1">
+              <h3 class="quiz-question" data-i18n="q1Title">What is your primary purpose in Indonesia?</h3>
+              <p class="quiz-instruction" data-i18n="q1Subtitle">Select the option that best reflects your primary activity:</p>
+              
+              <div class="quiz-options-grid">
+                <button type="button" class="quiz-opt-btn" data-value="investor">
+                  <span class="opt-icon">💼</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptInvestor">Investment &amp; Company Ownership</strong>
+                    <span class="opt-sub" data-i18n="q1OptInvestorSub">PT PMA Shareholder, Director, or Investor</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="family">
+                  <span class="opt-icon">💍</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptFamily">Family &amp; Indonesian Spouse</strong>
+                    <span class="opt-sub" data-i18n="q1OptFamilySub">Married to Indonesian citizen (WNI) or dependent</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="work">
+                  <span class="opt-icon">👔</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptWork">Employment &amp; Working</strong>
+                    <span class="opt-sub" data-i18n="q1OptWorkSub">Employed by Indonesian company / foreign expert</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="nomad">
+                  <span class="opt-icon">💻</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptNomad">Remote Work / Digital Nomad</strong>
+                    <span class="opt-sub" data-i18n="q1OptNomadSub">Work online for overseas clients while living in Bali</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="retirement">
+                  <span class="opt-icon">🌴</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptRetirement">Retirement / Second Home</strong>
+                    <span class="opt-sub" data-i18n="q1OptRetirementSub">Aged 55+ or long-stay tourists with proof of funds</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="tourism">
+                  <span class="opt-icon">✈️</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q1OptTourism">Tourism &amp; Business Meetings</strong>
+                    <span class="opt-sub" data-i18n="q1OptTourismSub">Short holiday, negotiations, or conference</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2 View -->
+            <div class="quiz-step-view" id="quizStep2">
+              <h3 class="quiz-question" data-i18n="q2Title">How long do you intend to stay in Indonesia?</h3>
+              <p class="quiz-instruction" data-i18n="q2Subtitle">Choose your planned stay duration:</p>
+              
+              <div class="quiz-options-grid">
+                <button type="button" class="quiz-opt-btn" data-value="short">
+                  <span class="opt-icon">⏱️</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q2OptShort">30 to 60 Days</strong>
+                    <span class="opt-sub" data-i18n="q2OptShortSub">Single-entry tourist or business exploration</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="medium">
+                  <span class="opt-icon">🗓️</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q2OptMed">60 to 180 Days (6 Months)</strong>
+                    <span class="opt-sub" data-i18n="q2OptMedSub">Extendable visit or trial living in Indonesia</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="1year">
+                  <span class="opt-icon">🌟</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q2Opt1Year">1 Year (KITAS)</strong>
+                    <span class="opt-sub" data-i18n="q2Opt1YearSub">Annual limited stay permit with multiple entry</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="2years">
+                  <span class="opt-icon">🚀</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q2Opt2Years">2 Years (KITAS)</strong>
+                    <span class="opt-sub" data-i18n="q2Opt2YearsSub">Multi-year permit for investors &amp; spouses</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="5years">
+                  <span class="opt-icon">🏛️</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q2Opt5Years">5 Years or Permanent (KITAP)</strong>
+                    <span class="opt-sub" data-i18n="q2Opt5YearsSub">Permanent residency permit for spouses or long-term investors</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="quiz-btn-nav">
+                <button type="button" class="btn-quiz-back" id="btnQuizBack1" data-i18n="btnBack">&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- Step 3 View -->
+            <div class="quiz-step-view" id="quizStep3">
+              <h3 class="quiz-question" data-i18n="q3Title">Do you currently have a local Indonesian sponsor or entity?</h3>
+              <p class="quiz-instruction" data-i18n="q3Subtitle">Indonesian immigration requires a legal sponsor for stay permits:</p>
+              
+              <div class="quiz-options-grid">
+                <button type="button" class="quiz-opt-btn" data-value="has_sponsor">
+                  <span class="opt-icon">🏢</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q3OptCompany">Yes, Indonesian PT / PT PMA or Indonesian Spouse</strong>
+                    <span class="opt-sub" data-i18n="q3OptCompanySub">I already have a company or marriage certificate ready</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="new_pma">
+                  <span class="opt-icon">📑</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q3OptNewPma">I want to establish a new PT PMA (Foreign Company)</strong>
+                    <span class="opt-sub" data-i18n="q3OptNewPmaSub">Need full company incorporation + Investor KITAS</span>
+                  </div>
+                </button>
+
+                <button type="button" class="quiz-opt-btn" data-value="no_sponsor">
+                  <span class="opt-icon">🌍</span>
+                  <div class="opt-info">
+                    <strong class="opt-title" data-i18n="q3OptNoSponsor">No, I am an individual / need agency sponsorship</strong>
+                    <span class="opt-sub" data-i18n="q3OptNoSponsorSub">Tourist, remote nomad, retiree, or seeking consultant sponsorship</span>
+                  </div>
+                </button>
+              </div>
+
+              <div class="quiz-btn-nav">
+                <button type="button" class="btn-quiz-back" id="btnQuizBack2" data-i18n="btnBack">&larr; Back</button>
+              </div>
+            </div>
+
+            <!-- Result View -->
+            <div class="quiz-result-view" id="quizResult">
+              <div class="result-badge-row">
+                <span class="match-score">★ 99% Best Match Found</span>
+                <span class="result-code-tag" id="resVisaCode">E31A</span>
+              </div>
+
+              <h3 class="result-title" id="resVisaTitle">Spouse KITAS (1 Year Stay Permit)</h3>
+              <p class="result-desc" id="resVisaDesc">
+                Ideal for foreign nationals legally married to an Indonesian citizen (WNI). Grants multiple exit and re-entry rights, eligibility for local bank accounts, and a direct pathway to 5-Year Permanent Residency (KITAP).
+              </p>
+
+              <div class="result-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label" data-i18n="resDuration">Validity:</span>
+                  <strong class="spec-val" id="resDurationVal">1 Year (Extendable)</strong>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label" data-i18n="resEntry">Entry Type:</span>
+                  <strong class="spec-val" id="resEntryVal">Multiple Entry (MERP)</strong>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label" data-i18n="resPrice">Starting from:</span>
+                  <strong class="spec-val price-highlight" id="resPriceVal">Rp 8.500.000</strong>
+                </div>
+              </div>
+
+              <div class="result-cta-row">
+                <a 
+                  href="https://wa.me/6281908797799" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-primary-wa"
+                  id="resWaBtn"
+                >
+                  <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                  </svg>
+                  <span data-i18n="resBtnWa">Consult This Visa on WhatsApp</span>
+                </a>
+
+                <button type="button" class="btn-secondary-outline" id="resDetailsBtn" data-i18n="resBtnDetails">
+                  View Full Requirements
+                </button>
+
+                <button type="button" class="btn-text-restart" id="btnRestartQuiz" data-i18n="btnRestart">
+                  ↻ Retake Quiz
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISA CATALOG & KITAS / KITAP SERVICES -->
+    <section class="section visas-section" id="visas-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="catalogTag">INDONESIA VISA PORTFOLIO</span>
+          <h2 class="section-title" data-i18n="catalogTitle">Comprehensive Visa &amp; Stay Permit Services</h2>
+          <p class="section-desc" data-i18n="catalogDesc">
+            Transparent pricing, official immigration compliance, and end-to-end guidance. Choose your category below:
+          </p>
+        </div>
+
+        <!-- Filter Tab Buttons -->
+        <div class="catalog-tabs" role="tablist" aria-label="Visa Categories">
+          <button type="button" class="catalog-tab-btn active" data-filter="all" role="tab" aria-selected="true" data-i18n="tabAll">
+            All Visas
+          </button>
+          <button type="button" class="catalog-tab-btn" data-filter="kitas" role="tab" aria-selected="false" data-i18n="tabKitas">
+            KITAS (1–2 Years)
+          </button>
+          <button type="button" class="catalog-tab-btn" data-filter="kitap" role="tab" aria-selected="false" data-i18n="tabKitap">
+            KITAP (5 Years Permanent)
+          </button>
+          <button type="button" class="catalog-tab-btn" data-filter="business" role="tab" aria-selected="false" data-i18n="tabBusiness">
+            Investor &amp; Business
+          </button>
+          <button type="button" class="catalog-tab-btn" data-filter="tourist" role="tab" aria-selected="false" data-i18n="tabTourist">
+            Tourist &amp; Social
+          </button>
+        </div>
+
+        <!-- Visa Cards Grid Container (Rendered by JS + Semantic Fallback) -->
+        <div class="visa-cards-grid" id="visaGrid">
+          <!-- Populated by JavaScript with comprehensive visa catalog -->
+        </div>
+
+        <!-- Disclaimer Banner -->
+        <div class="pricing-disclaimer-box">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <p data-i18n="pricingDisclaimer">
+            <strong>Transparent &amp; Guaranteed:</strong> Starting prices reflect standard professional consultant handling and administrative fees. Final government visa fees and exact document requirements are verified upfront on WhatsApp before payment. No hidden markups.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KITAS vs KITAP COMPARISON SECTION -->
+    <section class="section compare-section" id="compare-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="compareTag">EXPAT GUIDE</span>
+          <h2 class="section-title" data-i18n="compareTitle">KITAS vs. KITAP: Which One Do You Need?</h2>
+          <p class="section-desc" data-i18n="compareDesc">
+            Many foreign nationals confuse the Limited Stay Permit (KITAS) with the Permanent Stay Permit (KITAP). Here is the straightforward comparison:
+          </p>
+        </div>
+
+        <div class="compare-grid">
+          
+          <!-- KITAS Card -->
+          <div class="compare-card kitas-card">
+            <div class="card-badge" data-i18n="badgeKitas">LIMITED STAY (1-2 YEARS)</div>
+            <h3 class="compare-card-title">KITAS / ITAS</h3>
+            <span class="compare-card-sub" data-i18n="subKitas">Kartu Izin Tinggal Terbatas</span>
+            <p class="compare-card-desc" data-i18n="descKitas">
+              The standard temporary residence permit for foreigners working, investing, retiring, or living with an Indonesian spouse.
+            </p>
+
+            <ul class="compare-features-list">
+              <li>
+                <span class="feat-icon check">✓</span>
+                <span data-i18n="kitasFeat1"><strong>Duration:</strong> 1 Year to 2 Years per issuance.</span>
+              </li>
+              <li>
+                <span class="feat-icon check">✓</span>
+                <span data-i18n="kitasFeat2"><strong>Multiple Entry:</strong> Includes MERP (enter and exit Indonesia freely).</span>
+              </li>
+              <li>
+                <span class="feat-icon check">✓</span>
+                <span data-i18n="kitasFeat3"><strong>Local Privileges:</strong> Open Indonesian bank accounts, buy cars/motorbikes, apply for Indonesian driver’s license (SIM).</span>
+              </li>
+              <li>
+                <span class="feat-icon check">✓</span>
+                <span data-i18n="kitasFeat4"><strong>Sponsorship:</strong> Requires Indonesian PT, PT PMA, or Indonesian spouse sponsor.</span>
+              </li>
+              <li>
+                <span class="feat-icon check">✓</span>
+                <span data-i18n="kitasFeat5"><strong>Pathway:</strong> Can be converted to KITAP after qualifying period.</span>
+              </li>
+            </ul>
+
+            <a 
+              href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20am%20interested%20in%20applying%20for%20a%20KITAS." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-compare-wa"
+              data-i18n="btnKitasApply"
+            >
+              Consult KITAS Application &rarr;
+            </a>
+          </div>
+
+          <!-- KITAP Card -->
+          <div class="compare-card kitap-card">
+            <div class="card-badge gold-badge" data-i18n="badgeKitap">PERMANENT RESIDENCY (5 YEARS)</div>
+            <h3 class="compare-card-title">KITAP / ITAP</h3>
+            <span class="compare-card-sub" data-i18n="subKitap">Kartu Izin Tinggal Tetap</span>
+            <p class="compare-card-desc" data-i18n="descKitap">
+              The highest residency tier granted by Indonesia. Zero annual renewal hassle, maximum legal stability, and official KTP-WNA identity card.
+            </p>
+
+            <ul class="compare-features-list">
+              <li>
+                <span class="feat-icon check-gold">★</span>
+                <span data-i18n="kitapFeat1"><strong>Duration:</strong> 5 Years with automatic lifetime renewal rights.</span>
+              </li>
+              <li>
+                <span class="feat-icon check-gold">★</span>
+                <span data-i18n="kitapFeat2"><strong>Permanent MERP:</strong> 2-Year multiple entry re-entry permits indefinitely.</span>
+              </li>
+              <li>
+                <span class="feat-icon check-gold">★</span>
+                <span data-i18n="kitapFeat3"><strong>Full Rights:</strong> Get Indonesian National ID (KTP WNA), Family Card (KK), local bank credit, and property leasehold rights.</span>
+              </li>
+              <li>
+                <span class="feat-icon check-gold">★</span>
+                <span data-i18n="kitapFeat4"><strong>Work Rights (Spouses):</strong> Foreign spouses on KITAP can work informally or run family businesses without work permits.</span>
+              </li>
+              <li>
+                <span class="feat-icon check-gold">★</span>
+                <span data-i18n="kitapFeat5"><strong>Eligibility:</strong> Foreign spouse married to WNI for 2+ consecutive years on KITAS, or long-term investors/directors.</span>
+              </li>
+            </ul>
+
+            <a 
+              href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20consult%20about%20KITAP%20Permanent%20Residency." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-compare-gold"
+              data-i18n="btnKitapApply"
+            >
+              Consult KITAP Conversion &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="section process-section" id="process-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="processTag">STEP-BY-STEP WORKFLOW</span>
+          <h2 class="section-title" data-i18n="processTitle">How It Works: From Abroad to Settled in Indonesia</h2>
+          <p class="section-desc" data-i18n="processDesc">
+            We handle the complexities of Indonesian immigration so you never have to deal with government red tape alone.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          
+          <div class="process-card">
+            <div class="step-badge">01</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="step-title" data-i18n="step1Title">Free Consultation &amp; Profile Audit</h3>
+            <p class="step-desc" data-i18n="step1Desc">
+              Chat with our specialist via WhatsApp from your home country. We evaluate your goals, verify passport validity, and choose the optimal visa route.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-badge">02</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="step-title" data-i18n="step2Title">Digital Document Submission</h3>
+            <p class="step-desc" data-i18n="step2Desc">
+              Send simple digital scans of your passport and supporting documents. We format, draft official sponsor letters, and complete official filings.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-badge">03</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="step-title" data-i18n="step3Title">Direct Immigration Submission</h3>
+            <p class="step-desc" data-i18n="step3Desc">
+              We lodge your application directly into the official Direktorat Jenderal Imigrasi system. Receive your official E-Visa PDF directly to your email.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-badge">04</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="step-title" data-i18n="step4Title">Arrival, VIP Biometrics &amp; E-KITAS</h3>
+            <p class="step-desc" data-i18n="step4Desc">
+              Land in Indonesia seamlessly. In Bali or Jakarta, our team escorts you for your 10-minute biometric photo, and delivers your official e-KITAS and SKTT.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE KONSULINVISA.ID -->
+    <section class="section why-section" id="why-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="whyTag">THE KONSULINVISA ADVANTAGE</span>
+          <h2 class="section-title" data-i18n="whyTitle">Why Expats &amp; Businesses Trust Us</h2>
+          <p class="section-desc" data-i18n="whyDesc">
+            Eliminating anxiety, delays, and unexpected costs for clients moving to Indonesia.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why1Title">Fast-Track Turnaround</h3>
+            <p class="why-desc" data-i18n="why1Desc">
+              We expedite your application through priority channels to ensure the fastest legal turnaround without cutting corners.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why2Title">100% Legal &amp; Imigrasi Compliant</h3>
+            <p class="why-desc" data-i18n="why2Desc">
+              Full adherence to Indonesian immigration law (UU Keimigrasian). All telex approvals are registered officially in the national immigration database.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why3Title">Dedicated English Specialist</h3>
+            <p class="why-desc" data-i18n="why3Desc">
+              Direct personal communication via WhatsApp with an experienced case manager fluent in English and Indonesian. No confusing chatbots.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why4Title">Transparent IDR Pricing</h3>
+            <p class="why-desc" data-i18n="why4Desc">
+              No hidden agency markups or sudden surprises. Every quote clearly specifies immigration taxes, telex fees, and service charges.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why5Title">99.4% Verified Success Rate</h3>
+            <p class="why-desc" data-i18n="why5Desc">
+              Our thorough pre-check audits eliminate common rejection risks before documents ever reach the immigration officer’s desk.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h3 class="why-title" data-i18n="why6Title">Complete Relocation Ecosystem</h3>
+            <p class="why-desc" data-i18n="why6Desc">
+              Need to incorporate a foreign company (PT PMA), set up corporate accounting, or handle tax compliance? Our team provides full corporate synergy.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORPORATE SERVICES STRIP (PT PMA & TAX) -->
+    <section class="section corp-banner-section">
+      <div class="container">
+        <div class="corp-banner-card">
+          <div class="corp-banner-text">
+            <span class="corp-tag" data-i18n="corpTag">INTEGRATED CORPORATE SERVICES</span>
+            <h3 class="corp-heading" data-i18n="corpHeading">Setting Up a Company in Indonesia?</h3>
+            <p class="corp-sub" data-i18n="corpSub">
+              We handle end-to-end <strong>PT PMA Incorporation</strong> (Foreign Investment Company), OSS RBA licensing, Tax NPWP, and subsequent Investor KITAS (E28B) with zero DKP-TKA tax.
+            </p>
+          </div>
+          <div class="corp-banner-cta">
+            <a 
+              href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20inquire%20about%20PT%20PMA%20setup%20and%20Investor%20KITAS." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-corp-wa"
+              data-i18n="btnCorpWa"
+            >
+              Inquire PT PMA &amp; Investor KITAS &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section testimonials-section" id="testimonials-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="testiTag">REAL EXPAT EXPERIENCES</span>
+          <h2 class="section-title" data-i18n="testiTitle">Trusted by Expats &amp; Global Travelers</h2>
+          <p class="section-desc" data-i18n="testiDesc">
+            Here is what international residents have to say about working with our immigration consultants:
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">
+              &ldquo;Applying for my Spouse KITAS from Sydney felt daunting until I found konsulinvisa.id. They guided me through every marriage certificate translation, submitted everything online, and arranged our biometrics in Denpasar in 15 minutes!&rdquo;
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar">🇦🇺</div>
+              <div class="author-info">
+                <strong>Sarah Jenkins</strong>
+                <span>Australia • Spouse KITAS (E31A)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">
+              &ldquo;Setting up our tech consultancy in Jakarta required two Investor KITAS. The team explained the DKP-TKA tax exemption, processed our telex within 6 business days, and kept us updated on WhatsApp every single day. Incredible service.&rdquo;
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar">🇩🇪</div>
+              <div class="author-info">
+                <strong>Maximilian Weber</strong>
+                <span>Germany • Investor KITAS (E28B)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">
+              &ldquo;Upgrading from my second Spouse KITAS to the 5-Year Spouse KITAP was seamless. They secured my permanent MERP, KTP-WNA, and civil registry SKTT without any friction. Finally permanent peace of mind!&rdquo;
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar">🇬🇧</div>
+              <div class="author-info">
+                <strong>David Richardson</strong>
+                <span>United Kingdom • Spouse KITAP (E31C)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">
+              &ldquo;As a digital nomad moving to Canggu, the remote worker visa guidance was super clear. Professional, transparent prices with no hidden Bali agent markups. I have already recommended them to all my expat friends.&rdquo;
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar">🇺🇸</div>
+              <div class="author-info">
+                <strong>Elena Rostova</strong>
+                <span>United States • Remote Worker Visa</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section class="section faq-section" id="faq-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="faqTag">HELP &amp; CLARITY</span>
+          <h2 class="section-title" data-i18n="faqTitle">Frequently Asked Questions</h2>
+          <p class="section-desc" data-i18n="faqDesc">
+            Everything you need to know about Indonesian visas, stay permits, biometrics, and immigration rules.
+          </p>
+        </div>
+
+        <div class="faq-accordion-container" id="faqAccordion">
+          
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq1Q">Can I apply for a KITAS while I am still abroad in my home country?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq1A">
+                Yes! The entire initial application is handled 100% digitally. You do not need to visit an Indonesian Embassy. We lodge the application with the central immigration authorities in Jakarta and deliver the official E-Visa (Telex) directly to your email. You then fly into Indonesia using this E-Visa.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq2Q">What is the main difference between KITAS and KITAP?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq2A">
+                KITAS is a temporary limited stay permit valid for 1 or 2 years, requiring annual or biennial renewals. KITAP is a permanent stay permit valid for 5 years with automatic lifetime extensions, granting the right to hold an Indonesian KTP-WNA identity card and significantly greater freedom. Foreign spouses of Indonesians can qualify for KITAP after holding KITAS for 2 consecutive years.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq3Q">Does an Investor KITAS (E28B) exempt me from government work permit taxes?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq3A">
+                Yes! One of the biggest advantages of the Investor KITAS is that shareholders holding designated executive positions in a PT PMA are exempt from the mandatory Ministry of Manpower DKP-TKA tax (which saves USD $1,200 per year compared to standard Work KITAS E23).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq4Q">What happens after I land in Indonesia with my E-Visa?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq4A">
+                Upon landing at Soekarno-Hatta (Jakarta) or Ngurah Rai (Bali), you present your E-Visa at immigration. Within 30 days of arrival, we schedule your VIP biometric session (fingerprints and photo) at your local immigration office, which takes just 10–15 minutes with our escort. Your digital E-KITAS and MERP are then issued, followed by local civil registry (SKTT).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq5Q">Can I convert my Tourist or Business Visa to a KITAS inside Indonesia?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq5A">
+                In most cases under current regulations, onshore status conversions (Alih Status) are permitted for eligible visas without needing to leave Indonesia. Our immigration team will evaluate your current visa entry stamp and sponsor documents to execute an onshore conversion seamlessly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span data-i18n="faq6Q">What are the consequences of an overstay in Indonesia?</span>
+              <span class="faq-arrow">&plus;</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p data-i18n="faq6A">
+                Indonesian immigration charges a strict statutory penalty of IDR 1,000,000 (~$65 USD) per day for overstays under 60 days. Overstaying more than 60 days results in detention, deportation, and blacklisting from entering Indonesia. We actively manage visa extension deadlines for all clients to ensure you never overstay.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="section final-cta-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <div class="cta-badge">✦ START YOUR JOURNEY TODAY</div>
+          <h2 class="cta-title" data-i18n="finalCtaTitle">Ready to Apply for Your Indonesia Stay Permit?</h2>
+          <p class="cta-desc" data-i18n="finalCtaDesc">
+            Connect with our dedicated visa specialists on WhatsApp. Get a free, confidential eligibility assessment within 15 minutes.
+          </p>
+          <div class="cta-btn-wrap">
+            <a 
+              href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20would%20like%20to%20start%20my%20visa%20%2F%20KITAS%20application." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-cta-large"
+            >
+              <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              <span data-i18n="finalCtaBtn">Chat on WhatsApp (+62 819-0879-7799)</span>
+            </a>
+          </div>
+          <span class="cta-micro-note" data-i18n="finalCtaMicro">No commitment required • Free initial consultation • Instant reply</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col brand-col">
+        <img src="assets/brand_logo.png" alt="konsulinvisa.id Logo" class="footer-logo-img" />
+        <p class="footer-bio" data-i18n="footerBio">
+          Your premier Indonesian immigration consultancy. Facilitating smooth legal residency, KITAS, and KITAP solutions for expatriates, international families, and global business enterprises.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://instagram.com/konsulinvisa.id" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>@konsulinvisa.id</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footerNavTitle">Key Services</h4>
+        <ul class="footer-links">
+          <li><a href="#visas-section">Spouse KITAS (E31A)</a></li>
+          <li><a href="#visas-section">Investor KITAS (E28B)</a></li>
+          <li><a href="#visas-section">Working KITAS (E23)</a></li>
+          <li><a href="#kitap-section">Spouse KITAP (E31C - 5 Yrs)</a></li>
+          <li><a href="#visas-section">Remote Worker Visa</a></li>
+          <li><a href="#visas-section">Multiple Entry Business (D2)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footerLegalTitle">Corporate Hub</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/6281908797799?text=Hi%2C%20inquiry%20PT%20PMA">PT PMA Incorporation</a></li>
+          <li><a href="https://wa.me/6281908797799?text=Hi%2C%20inquiry%20Tax">Accounting &amp; Tax Compliance</a></li>
+          <li><a href="#compare-section">KITAS to KITAP Conversion</a></li>
+          <li><a href="#process-section">VIP Biometrics Escort</a></li>
+          <li><a href="#faq-section">Immigration FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footerContactTitle">Direct Contact</h4>
+        <div class="footer-contact-info">
+          <p>
+            <strong>WhatsApp Hotline:</strong><br />
+            <a href="https://wa.me/6281908797799" target="_blank" rel="noopener noreferrer" class="contact-link">
+              +62 819-0879-7799
+            </a>
+          </p>
+          <p>
+            <strong>Operational Hubs:</strong><br />
+            Jakarta &amp; Bali, Indonesia
+          </p>
+          <p>
+            <strong>Consultation Hours:</strong><br />
+            Mon – Sat: 08:30 – 19:00 WIB
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-flex">
+        <p class="copyright">
+          &copy; <span id="currentYear">2026</span> konsulinvisa.id. All rights reserved.
+        </p>
+        <p class="legal-note" data-i18n="footerLegalNote">
+          Independent Immigration &amp; Corporate Advisory. Operating in compliance with Direktorat Jenderal Imigrasi Republik Indonesia.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ACCESSIBLE MODAL: VISA DETAILS DIALOG -->
+  <dialog id="visaDetailsDialog" class="visa-dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-content">
+      
+      <!-- Dialog Header -->
+      <div class="dialog-header">
+        <div class="dialog-title-wrap">
+          <span class="dialog-code-pill" id="dialogCode">E31A</span>
+          <h3 class="dialog-title" id="dialogTitle">Spouse KITAS (1 Year)</h3>
+          <span class="dialog-category-badge" id="dialogCategory">Family &amp; Spouse</span>
+        </div>
+        <button type="button" class="dialog-close-btn" id="dialogCloseBtn" aria-label="Close details dialog">
+          &times;
+        </button>
+      </div>
+
+      <!-- Dialog Body -->
+      <div class="dialog-body">
+        
+        <!-- Summary Strip -->
+        <div class="dialog-summary-box">
+          <div class="sum-col">
+            <span class="sum-label" data-i18n="modalDuration">Stay Duration</span>
+            <strong class="sum-value" id="dialogDuration">1 Year</strong>
+          </div>
+          <div class="sum-col">
+            <span class="sum-label" data-i18n="modalEntry">Entry Privilege</span>
+            <strong class="sum-value" id="dialogEntry">Multiple Entry (MERP)</strong>
+          </div>
+          <div class="sum-col">
+            <span class="sum-label" data-i18n="modalPrice">Estimated Price</span>
+            <strong class="sum-value price-highlight" id="dialogPrice">Rp 8.500.000</strong>
+          </div>
+        </div>
+
+        <p class="dialog-description" id="dialogDescription">
+          Detailed visa explanation will load here.
+        </p>
+
+        <!-- What's Included -->
+        <div class="dialog-section">
+          <h4 class="dialog-sec-title" data-i18n="modalIncludedTitle">Key Privileges &amp; What's Included:</h4>
+          <ul class="dialog-bullets" id="dialogInclusions">
+            <!-- Dynamic bullets -->
+          </ul>
+        </div>
+
+        <!-- Required Documents Checklist -->
+        <div class="dialog-section">
+          <h4 class="dialog-sec-title" data-i18n="modalDocsTitle">Standard Required Documents:</h4>
+          <ul class="dialog-bullets" id="dialogRequirements">
+            <!-- Dynamic checklist -->
+          </ul>
+        </div>
+
+        <!-- Timeline -->
+        <div class="dialog-section">
+          <h4 class="dialog-sec-title" data-i18n="modalTimelineTitle">Estimated Processing Timeline:</h4>
+          <p class="dialog-timeline-text" id="dialogTimeline">
+            E-Visa approval: 5–7 business days. Post-arrival biometrics: 3–5 business days.
+          </p>
+        </div>
+
+        <!-- Quick Inquiry via WhatsApp -->
+        <div class="dialog-inquiry-box">
+          <h4 class="inquiry-box-title" data-i18n="modalInquiryTitle">Inquire This Visa via WhatsApp:</h4>
+          <form id="dialogInquiryForm" class="dialog-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="applicantNationality" data-i18n="labelNationality">Your Nationality / Passport Country:</label>
+                <input type="text" id="applicantNationality" placeholder="e.g. Australia, United Kingdom, USA" required />
+              </div>
+              <div class="form-group">
+                <label for="applicantArrival" data-i18n="labelArrival">Estimated Arrival in Indonesia:</label>
+                <input type="text" id="applicantArrival" placeholder="e.g. Next Month, or Already in Bali" />
+              </div>
+            </div>
+            <button type="submit" class="btn-primary-wa full-width" id="dialogSubmitWa">
+              <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              <span data-i18n="modalBtnSubmit">Open WhatsApp Consultation</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- STICKY FLOATING WHATSAPP BUTTON -->
+  <div class="floating-wa-wrap" id="floatingWaWrap">
+    <a 
+      href="https://wa.me/6281908797799?text=Hi%20konsulinvisa.id%2C%20I%20need%20assistance%20with%20an%20Indonesian%20visa%20%2F%20KITAS." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-wa-btn" 
+      aria-label="Direct WhatsApp Chat with Visa Consultant"
+    >
+      <span class="wa-pulse-ring"></span>
+      <svg class="floating-wa-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.167 8.167 0 0 1-1.25-4.37c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4a8.13 8.13 0 0 1 2.39 5.78c0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+      </svg>
+      <span class="floating-tooltip" data-i18n="floatingWaTooltip">Chat with Visa Specialist</span>
+    </a>
   </div>
 
   <script src="script.js"></script>
