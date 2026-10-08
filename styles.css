@@ -1825,6 +1825,10 @@ img {
   overflow: hidden;
 }
 
+.visa-dialog:not([open]) {
+  display: none;
+}
+
 .visa-dialog::backdrop {
   background-color: rgba(11, 19, 43, 0.65);
   backdrop-filter: blur(6px);
