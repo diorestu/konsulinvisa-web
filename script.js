@@ -3,6 +3,14 @@
  * Clean i18n switcher, live countdown, lead capture, and ambient depth.
  */
 
+// ============================================================================
+// 🎯 TARGET LAUNCH DEADLINE CONFIGURATION
+// Ubah tanggal di bawah ini sesuai jadwal peluncuran yang diinginkan.
+// Format: 'YYYY-MM-DDTHH:MM:SS' (Tahun-Bulan-TanggalTHari:Menit:Detik)
+// Contoh: '2026-11-01T00:00:00' -> 1 November 2026 pukul 00:00 WIB
+// ============================================================================
+const LAUNCH_DEADLINE = '2026-11-01T00:00:00';
+
 // Bilingual Dictionaries
 const i18nData = {
   id: {
@@ -150,23 +158,14 @@ function initCountdown() {
 
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  const STORAGE_KEY = 'konsulinvisa_launch_target';
-  let targetTime = localStorage.getItem(STORAGE_KEY);
-
-  if (!targetTime || isNaN(Number(targetTime)) || Number(targetTime) <= Date.now()) {
-    // 38 days, 14 hours, 30 minutes in the future
-    const futureDate = new Date(Date.now() + (38 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000));
-    targetTime = futureDate.getTime();
-    localStorage.setItem(STORAGE_KEY, targetTime.toString());
-  } else {
-    targetTime = Number(targetTime);
-  }
+  const targetDate = new Date(LAUNCH_DEADLINE);
+  const targetTime = targetDate.getTime();
 
   function tick() {
     const now = Date.now();
     const diff = targetTime - now;
 
-    if (diff <= 0) {
+    if (diff <= 0 || isNaN(diff)) {
       daysEl.textContent = '00';
       hoursEl.textContent = '00';
       minutesEl.textContent = '00';
